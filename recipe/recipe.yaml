@@ -90,8 +90,7 @@ requirements:
       then: typing_extensions
   run_constraints:
     # require mpi build of h5py
-    - if: not win
-      then: h5py * mpi_${{ mpi }}_*
+    - h5py * mpi_${{ mpi }}_*
   ignore_run_exports:
     # lose build-time pinning since we don't link libadios
     from_package:
